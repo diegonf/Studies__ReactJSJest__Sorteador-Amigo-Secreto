@@ -1,12 +1,18 @@
-/* src/componentes/Card/estilos.css */
 .card {
     background: #FFF9EB;
     border: 2px solid #000000;
     box-sizing: border-box;
     border-radius: 64px 64px 0px 0px;
-    padding: 80px;
+    padding: 50px;
     display: flex;
     flex: 1;
     margin-top: -32px;
     justify-content: center;
+}
+
+@media screen and (max-width: 800px) {
+    .card {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }

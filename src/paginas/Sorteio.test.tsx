@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from "@testing-library/react";
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 import { useListaDeParticipantes } from "../state/hook/useListaDeParticipantes";
 import { useResultadoSorteio } from "../state/hook/useResultadoSorteio";
@@ -33,20 +34,28 @@ describe('na pagina de sorteio', () => {
         (useResultadoSorteio as jest.Mock).mockReturnValue(resultado);
     })
     test('todos os participantes podem exibir o seu amigo secreto', () => {
-        render(<RecoilRoot>
-            <Sorteio />
-        </RecoilRoot>)
+        render(
+            <BrowserRouter>
+                <RecoilRoot>
+                    <Sorteio />
+                </RecoilRoot>
+            </BrowserRouter>
+        )
 
         const opcoes = screen.queryAllByRole('option')
         expect(opcoes).toHaveLength(participantes.length + 1) //ja vem uma option por padrão
     })
     test('o amigo secreto é exibido quando solicitado', () => {
-        render(<RecoilRoot>
-            <Sorteio />
-        </RecoilRoot>)
+        render(
+            <BrowserRouter>
+                <RecoilRoot>
+                    <Sorteio />
+                </RecoilRoot>
+            </BrowserRouter>
+        )
 
         const select = screen.getByPlaceholderText('Selecione o seu nome')
-        
+
         fireEvent.change(select, {
             target: {
                 value: participantes[0]

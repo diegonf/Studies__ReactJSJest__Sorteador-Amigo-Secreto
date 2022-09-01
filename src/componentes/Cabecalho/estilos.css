@@ -1,15 +1,14 @@
-/* src/componentes/Cabecalho/estilos.css */
-
 .cabecalho {
     display: flex;
     justify-content: space-around;
-    padding-top: 120px;
+    padding-top: 20px;
 }
 
 .imagem-logo {
     background-image: url("/public/imagens/logo.png");
-    width: 351px;
     height: 117px;
+    margin-top: 40px;
+    width: 351px;
 }
 
 .participante {
@@ -27,5 +26,8 @@
         background-image: url("/public/imagens/logo-pequeno.png");
         width: 235px;
         height: 199px;
+    }
+    .participante {
+        max-width: 90%;
     }
 }

@@ -1,5 +1,5 @@
-// src/paginas/Sorteio.tsx
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import Card from "../componentes/Card"
 import { useListaDeParticipantes } from "../state/hook/useListaDeParticipantes"
 import { useResultadoSorteio } from "../state/hook/useResultadoSorteio"
@@ -9,11 +9,10 @@ import './Sorteio.css'
 const Sorteio = () => {
 
     const participantes = useListaDeParticipantes()
-
     const [participanteDaVez, setParticipanteDaVez] = useState('')
     const [amigoScreto, setAmigoSecreto] = useState('')
-
     const resultado = useResultadoSorteio()
+    const navigate = useNavigate();
 
     const sortear = (evento: React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault()
@@ -40,6 +39,13 @@ const Sorteio = () => {
                     </select>
                     <p>Clique em em sortear para ver quem é seu amigo secreto!</p>
                     <button className="botao-sortear">Sortear</button>
+                    <button 
+                        role='link'
+                        onClick={() => navigate('/')} 
+                        className="botao-voltar"
+                    >
+                        {`<- Voltar`}
+                    </button>
                 </form>
                 {amigoScreto && <p className="resultado" role="alert">{amigoScreto}</p>}
                 <footer className="sorteio">

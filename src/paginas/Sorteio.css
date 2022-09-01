@@ -29,6 +29,21 @@ footer.sorteio {
     background-color: #4B69FD;
 }
 
+.botao-voltar {
+    background: none;
+    border-radius: 45px;
+    display: block;
+    font-size: 20px;
+    height: 80px;
+    margin: 16px auto;
+    width: 350px;
+}
+
+.botao-voltar:hover {
+    background-color: #c3c3c3;
+    cursor: pointer;
+}
+
 select {
     border-radius: 45px;
     height: 82px;
