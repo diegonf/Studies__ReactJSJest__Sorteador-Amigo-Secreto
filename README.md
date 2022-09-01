@@ -1,6 +1,6 @@
 ## <p align="center"> ![Logo do Sorteador de Amigo-Secreto](./public/imagens/participante.png)<br>Sorteador de Amigo-Secreto</p>
 
-* Projeto: 
+* Projeto: https://studies-react-jsj-est-sorteador-amigo-secreto.vercel.app/
 * Curso: [React: testando os seus componentes](https://cursos.alura.com.br/course/react-testando-componentes)
 * Instituição: [Alura](https://www.alura.com.br)
 
